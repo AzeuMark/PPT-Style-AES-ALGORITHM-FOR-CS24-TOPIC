@@ -1,0 +1,40 @@
+<div class="slide slide-state">
+    <h2 class="fade-in-up">Encryption Overview</h2>
+    <h1 class="fade-in-up delay-1">The 4×4 State Array</h1>
+
+    <p class="fade-in-up delay-2">The 128-bit plaintext is arranged into a 4×4 matrix of bytes.</p>
+
+    <div class="state-demo">
+        <!-- Plaintext string -->
+        <div class="plain-text fade-in-up delay-3">
+            <span class="byte-char">T</span><span class="byte-char">h</span><span class="byte-char">i</span><span class="byte-char">s</span><span class="byte-char"> </span><span class="byte-char">i</span><span class="byte-char">s</span><span class="byte-char"> </span><span class="byte-char">a</span><span class="byte-char"> </span><span class="byte-char">t</span><span class="byte-char">e</span><span class="byte-char">s</span><span class="byte-char">t</span><span class="byte-char">!</span><span class="byte-char">!</span>
+        </div>
+
+        <!-- Arrow -->
+        <div class="state-arrow fade-in delay-4">
+            <svg width="40" height="50" viewBox="0 0 40 50"><path d="M20 0v40m-8-8l8 8 8-8" fill="none" stroke="#60a5fa" stroke-width="2"/></svg>
+        </div>
+
+        <!-- 4x4 Grid -->
+        <div class="state-grid" id="stateGrid">
+            <div class="grid-cell">54</div>
+            <div class="grid-cell">20</div>
+            <div class="grid-cell">61</div>
+            <div class="grid-cell">73</div>
+            <div class="grid-cell">68</div>
+            <div class="grid-cell">69</div>
+            <div class="grid-cell">20</div>
+            <div class="grid-cell">65</div>
+            <div class="grid-cell">69</div>
+            <div class="grid-cell">73</div>
+            <div class="grid-cell">74</div>
+            <div class="grid-cell">73</div>
+            <div class="grid-cell">73</div>
+            <div class="grid-cell">20</div>
+            <div class="grid-cell">21</div>
+            <div class="grid-cell">21</div>
+        </div>
+
+        <div class="grid-label fade-in delay-7">4 rows × 4 columns = 16 bytes = 128 bits</div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+window.__slideHTML = `
+<div class="slide slide-history">
+    <h2 class="fade-in-up">History &amp; Key Sizes</h2>
+    <h1 class="fade-in-up delay-1">Origins of AES</h1>
+    <div class="timeline">
+        <div class="tl-item fade-in-left delay-2">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <div class="tl-year">Creators</div>
+                <div class="tl-text">Developed by <strong>Joan Daemen</strong> and <strong>Vincent Rijmen</strong></div>
+            </div>
+        </div>
+        <div class="tl-item fade-in-left delay-3">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <div class="tl-year">2001</div>
+                <div class="tl-text">Selected by <strong>NIST</strong> to replace the older <strong>DES</strong> algorithm</div>
+            </div>
+        </div>
+        <div class="tl-item fade-in-left delay-4">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <div class="tl-year">Standard</div>
+                <div class="tl-text">Became the global standard for symmetric encryption</div>
+            </div>
+        </div>
+    </div>
+    <div class="key-sizes fade-in-up delay-5">
+        <div class="key-card">
+            <div class="key-bits">128</div>
+            <div class="key-label">bits</div>
+            <div class="key-name">AES-128</div>
+        </div>
+        <div class="key-card">
+            <div class="key-bits">192</div>
+            <div class="key-label">bits</div>
+            <div class="key-name">AES-192</div>
+        </div>
+        <div class="key-card">
+            <div class="key-bits">256</div>
+            <div class="key-label">bits</div>
+            <div class="key-name">AES-256</div>
+        </div>
+    </div>
+    <p class="fade-in-up delay-6">AES supports three key sizes — longer keys mean stronger security.</p>
+</div>
+`;

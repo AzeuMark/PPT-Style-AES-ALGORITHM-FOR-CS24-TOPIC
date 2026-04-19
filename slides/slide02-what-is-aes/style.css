@@ -1,0 +1,112 @@
+.slide-what h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-what h1 {
+    font-size: 2.6rem;
+    margin-bottom: 36px;
+}
+
+/* Cards */
+.info-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 24px 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96,165,250,0.4);
+}
+
+.card-icon {
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #e0eaff;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 0.88rem;
+    color: #9ab3d8;
+    line-height: 1.5;
+}
+
+.card-desc strong {
+    color: #60a5fa;
+}
+
+/* Diagram */
+.diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.diagram-box {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.diagram-box.plain {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #cdd9f0;
+}
+
+.diagram-box.aes-box {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: 1px solid #3b82f6;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(37,99,235,0.4);
+}
+
+.diagram-box.cipher {
+    background: rgba(56,189,248,0.12);
+    border: 1px solid rgba(56,189,248,0.3);
+    color: #7dd3fc;
+}
+
+.diagram-key {
+    position: absolute;
+    bottom: -36px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #fbbf24;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .info-cards { flex-direction: column; align-items: center; }
+    .card { width: 90%; }
+}

@@ -1,0 +1,59 @@
+window.__slideHTML = `
+<div class="slide slide-why">
+    <h2 class="fade-in-up">Real-World Impact</h2>
+    <h1 class="fade-in-up delay-1">Why AES Matters</h1>
+    <p class="fade-in-up delay-2">AES is important because it is <span class="highlight">fast</span> in both software and hardware,<br>and has proven <strong>very secure</strong> after years of analysis.</p>
+    <div class="why-cards">
+        <div class="why-card fade-in-up delay-3">
+            <div class="why-icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+            </div>
+            <div class="why-title">Fast</div>
+            <div class="why-desc">Efficient in both software and dedicated hardware implementations</div>
+        </div>
+        <div class="why-card fade-in-up delay-4">
+            <div class="why-icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L3 7v5c0 5.25 3.75 10.74 9 12 5.25-1.26 9-6.75 9-12V7l-9-5z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                </svg>
+            </div>
+            <div class="why-title">Proven Secure</div>
+            <div class="why-desc">No practical attack found after 20+ years of cryptanalysis</div>
+        </div>
+    </div>
+    <div class="use-cases fade-in-up delay-5">
+        <div class="use-label">You'll find AES in:</div>
+        <div class="use-icons">
+            <div class="use-item">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span>HTTPS</span>
+            </div>
+            <div class="use-item">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                    <circle cx="12" cy="20" r="1"/>
+                </svg>
+                <span>Wi-Fi Security</span>
+            </div>
+            <div class="use-item">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <rect x="8" y="13" width="8" height="4" rx="1"/>
+                    <path d="M10 13v-1a2 2 0 1 1 4 0v1"/>
+                </svg>
+                <span>File Encryption</span>
+            </div>
+        </div>
+    </div>
+</div>
+`;

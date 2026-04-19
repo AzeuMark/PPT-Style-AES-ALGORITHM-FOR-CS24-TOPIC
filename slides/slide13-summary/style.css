@@ -1,0 +1,114 @@
+.slide-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-icon {
+    margin-bottom: 12px;
+}
+
+.summary-icon svg {
+    filter: drop-shadow(0 0 20px rgba(96,165,250,0.4));
+}
+
+.slide-summary h1 {
+    margin-bottom: 28px;
+    font-size: 2.6rem;
+}
+
+/* Summary points */
+.summary-points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 36px;
+    text-align: left;
+}
+
+.sp {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.sp:hover {
+    border-color: rgba(96,165,250,0.3);
+    transform: translateX(4px);
+}
+
+.sp-num {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border-radius: 50%;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sp span {
+    font-size: 0.95rem;
+    color: #cdd9f0;
+    line-height: 1.5;
+}
+
+.sp span strong {
+    color: #60a5fa;
+}
+
+/* Thank you */
+.thankyou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.thankyou-text {
+    font-size: 1.15rem;
+    color: #93bbff;
+    font-style: italic;
+}
+
+.thankyou-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 32px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+}
+
+.ty-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ty-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e0eaff;
+}
+
+@media (max-width: 768px) {
+    .summary-points { max-width: 95%; }
+    .sp { padding: 10px 14px; }
+    .sp span { font-size: 0.85rem; }
+    .slide-summary h1 { font-size: 2rem; }
+}

@@ -1,0 +1,246 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a1628 0%, #1a3a6c 40%, #2563eb 100%);
+    color: #f0f4ff;
+}
+
+/* ===== SLIDE CONTAINER ===== */
+#slide-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px 60px;
+    opacity: 1;
+    transition: opacity 0.35s ease;
+}
+
+#slide-container.fade-out {
+    opacity: 0;
+}
+
+/* ===== SLIDE INNER (each slide.html renders inside here) ===== */
+.slide {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.slide h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.slide h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #93bbff;
+}
+
+.slide p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #cdd9f0;
+    max-width: 800px;
+    margin: 0 auto 16px;
+}
+
+.slide .highlight {
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.slide .accent {
+    color: #38bdf8;
+}
+
+/* ===== EYE TOGGLE BUTTON ===== */
+#btn-toggle-nav {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 200;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(6, 14, 30, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.25s, background 0.25s, box-shadow 0.25s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-toggle-nav:hover {
+    opacity: 1;
+    background: rgba(6, 14, 30, 0.7);
+    border-color: rgba(96, 165, 250, 0.5);
+    box-shadow: 0 2px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== NAVIGATION BAR ===== */
+#nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background: rgba(6, 14, 30, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+#nav-bar.nav-hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#nav-bar button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #dbe6ff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    user-select: none;
+}
+
+#nav-bar button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#nav-bar button:active {
+    transform: scale(0.96);
+}
+
+#nav-bar button:disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none;
+}
+
+#slide-counter {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* ===== UTILITY CLASSES FOR SLIDES ===== */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeInLeft 0.5s ease forwards;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.7);
+    animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Delay helpers */
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.6s; }
+.delay-5 { animation-delay: 0.75s; }
+.delay-6 { animation-delay: 0.9s; }
+.delay-7 { animation-delay: 1.05s; }
+.delay-8 { animation-delay: 1.2s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #slide-container {
+        padding: 24px 24px 90px;
+    }
+    .slide h1 {
+        font-size: 1.8rem;
+    }
+    .slide h2 {
+        font-size: 1.3rem;
+    }
+    .slide p {
+        font-size: 1rem;
+    }
+    #nav-bar {
+        gap: 16px;
+    }
+    #nav-bar button {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}

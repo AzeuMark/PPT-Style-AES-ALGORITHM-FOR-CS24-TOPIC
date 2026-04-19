@@ -1,0 +1,102 @@
+.slide-mix h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-mix h1 {
+    margin-bottom: 12px;
+}
+
+.slide-mix > p {
+    margin-bottom: 28px;
+}
+
+/* Mix grid */
+.mix-demo {
+    margin-bottom: 32px;
+}
+
+.mix-grid {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.mix-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.mcell {
+    width: 52px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.88rem;
+    font-weight: 600;
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.25);
+    color: #38bdf8;
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* Column glow animation */
+.mix-col {
+    animation: colGlow 4s ease-in-out infinite;
+}
+
+#col0 { animation-delay: 0.6s; }
+#col1 { animation-delay: 1.6s; }
+#col2 { animation-delay: 2.6s; }
+#col3 { animation-delay: 3.6s; }
+
+@keyframes colGlow {
+    0%   { border-color: transparent; box-shadow: none; }
+    10%  { border-color: rgba(56,189,248,0.5); box-shadow: 0 0 20px rgba(56,189,248,0.2); }
+    20%  { border-color: rgba(167,139,250,0.5); box-shadow: 0 0 20px rgba(167,139,250,0.2); }
+    30%  { border-color: transparent; box-shadow: none; }
+    100% { border-color: transparent; box-shadow: none; }
+}
+
+/* Info cards */
+.mix-info {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mix-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 0.88rem;
+    color: #cdd9f0;
+    max-width: 280px;
+    text-align: left;
+}
+
+.mix-icon {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .mcell { width: 42px; height: 36px; font-size: 0.76rem; }
+    .mix-info { flex-direction: column; align-items: center; }
+    .mix-card { max-width: 90%; }
+}

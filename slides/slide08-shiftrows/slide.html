@@ -1,0 +1,48 @@
+<div class="slide slide-shift">
+    <h2 class="fade-in-up">Round Step 2</h2>
+    <h1 class="fade-in-up delay-1">ShiftRows</h1>
+
+    <p class="fade-in-up delay-2">The rows of the state are shifted left by <span class="highlight">0, 1, 2, or 3</span> positions.<br>This <strong>spreads the data</strong> across different columns.</p>
+
+    <div class="shift-demo fade-in-up delay-3">
+        <!-- Row 0 — no shift -->
+        <div class="shift-row" id="row0">
+            <div class="shift-label">Row 0 <span class="shift-amount">← 0</span></div>
+            <div class="shift-cells">
+                <span class="cell r0">D2</span><span class="cell r0">30</span><span class="cell r0">74</span><span class="cell r0">DA</span>
+            </div>
+        </div>
+        <!-- Row 1 — shift 1 -->
+        <div class="shift-row" id="row1">
+            <div class="shift-label">Row 1 <span class="shift-amount">← 1</span></div>
+            <div class="shift-cells">
+                <span class="cell r1">47</span><span class="cell r1">C6</span><span class="cell r1">0E</span><span class="cell r1">AC</span>
+            </div>
+        </div>
+        <!-- Row 2 — shift 2 -->
+        <div class="shift-row" id="row2">
+            <div class="shift-label">Row 2 <span class="shift-amount">← 2</span></div>
+            <div class="shift-cells">
+                <span class="cell r2">10</span><span class="cell r2">32</span><span class="cell r2">EF</span><span class="cell r2">EB</span>
+            </div>
+        </div>
+        <!-- Row 3 — shift 3 -->
+        <div class="shift-row" id="row3">
+            <div class="shift-label">Row 3 <span class="shift-amount">← 3</span></div>
+            <div class="shift-cells">
+                <span class="cell r3">4D</span><span class="cell r3">44</span><span class="cell r3">D3</span><span class="cell r3">A4</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- After grid -->
+    <div class="shift-result fade-in-up delay-5">
+        <div class="shift-result-label">After ShiftRows</div>
+        <div class="result-grid">
+            <span class="cell r0">D2</span><span class="cell r0">30</span><span class="cell r0">74</span><span class="cell r0">DA</span>
+            <span class="cell r1">C6</span><span class="cell r1">0E</span><span class="cell r1">AC</span><span class="cell r1">47</span>
+            <span class="cell r2">EF</span><span class="cell r2">EB</span><span class="cell r2">10</span><span class="cell r2">32</span>
+            <span class="cell r3">A4</span><span class="cell r3">4D</span><span class="cell r3">44</span><span class="cell r3">D3</span>
+        </div>
+    </div>
+</div>

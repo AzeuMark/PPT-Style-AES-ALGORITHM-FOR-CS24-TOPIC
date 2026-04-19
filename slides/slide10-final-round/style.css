@@ -1,0 +1,148 @@
+.slide-final h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-final h1 {
+    margin-bottom: 12px;
+}
+
+.slide-final > p {
+    margin-bottom: 32px;
+}
+
+/* Flow diagram */
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.05);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.flow-step.active {
+    border-color: rgba(96,165,250,0.4);
+    color: #60a5fa;
+}
+
+.flow-step.active .flow-icon svg {
+    stroke: #60a5fa;
+}
+
+.flow-step.final-step {
+    border-color: rgba(52,211,153,0.4);
+    color: #34d399;
+    background: rgba(52,211,153,0.06);
+}
+
+.flow-step.final-step .flow-icon svg {
+    stroke: #34d399;
+}
+
+.flow-step span {
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Skipped step */
+.flow-step.skipped {
+    border-color: rgba(239,68,68,0.3);
+    background: rgba(239,68,68,0.05);
+    color: rgba(255,255,255,0.3);
+    position: relative;
+}
+
+.flow-step.skipped .flow-icon svg {
+    stroke: rgba(255,255,255,0.25);
+}
+
+.cross-line {
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    right: -4px;
+    height: 3px;
+    background: #ef4444;
+    transform: rotate(-12deg);
+    border-radius: 2px;
+    animation: crossSlash 0.4s 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes crossSlash {
+    from { opacity: 0; transform: rotate(-12deg) scaleX(0); }
+    to   { opacity: 1; transform: rotate(-12deg) scaleX(1); }
+}
+
+.skip-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    animation: badgePop 0.3s 1.5s ease forwards;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+@keyframes badgePop {
+    to { opacity: 1; transform: scale(1); }
+}
+
+.flow-arrow {
+    flex-shrink: 0;
+}
+
+.flow-arrow-down {
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* Ciphertext result */
+.cipher-result {
+    display: flex;
+    justify-content: center;
+}
+
+.cipher-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    background: rgba(52,211,153,0.08);
+    border: 1px solid rgba(52,211,153,0.3);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #34d399;
+    box-shadow: 0 0 24px rgba(52,211,153,0.15);
+}
+
+@media (max-width: 768px) {
+    .flow-diagram { gap: 4px; }
+    .flow-step { padding: 10px 12px; }
+    .flow-step span { font-size: 0.72rem; }
+    .flow-arrow svg { width: 20px; }
+}

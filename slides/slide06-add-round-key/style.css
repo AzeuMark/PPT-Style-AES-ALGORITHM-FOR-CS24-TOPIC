@@ -1,0 +1,107 @@
+.slide-ark h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-ark h1 {
+    margin-bottom: 12px;
+}
+
+.slide-ark > p {
+    margin-bottom: 28px;
+}
+
+/* XOR demo layout */
+.xor-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.xor-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.xor-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Mini 4x4 grids */
+.mini-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 48px);
+    grid-template-rows: repeat(4, 38px);
+    gap: 3px;
+}
+
+.mini-grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.state-colors span {
+    background: rgba(96,165,250,0.15);
+    border: 1px solid rgba(96,165,250,0.3);
+    color: #60a5fa;
+}
+
+.key-colors span {
+    background: rgba(251,191,36,0.1);
+    border: 1px solid rgba(251,191,36,0.25);
+    color: #fbbf24;
+}
+
+.result-colors span {
+    background: rgba(52,211,153,0.12);
+    border: 1px solid rgba(52,211,153,0.3);
+    color: #34d399;
+}
+
+/* XOR symbol */
+.xor-symbol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* Arrow */
+.xor-arrow {
+    text-align: center;
+    margin: 4px 0;
+}
+
+/* Result block */
+.result-block {
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .mini-grid {
+        grid-template-columns: repeat(4, 40px);
+        grid-template-rows: repeat(4, 32px);
+    }
+    .mini-grid span { font-size: 0.72rem; }
+    .xor-demo { gap: 14px; }
+}

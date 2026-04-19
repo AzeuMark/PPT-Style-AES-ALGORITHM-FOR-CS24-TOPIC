@@ -1,0 +1,112 @@
+.slide-why h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-why h1 {
+    margin-bottom: 12px;
+}
+
+.slide-why > p {
+    margin-bottom: 32px;
+}
+
+/* Why cards */
+.why-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.why-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    width: 240px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(96,165,250,0.4);
+}
+
+.why-icon {
+    margin-bottom: 14px;
+}
+
+.why-icon svg {
+    filter: drop-shadow(0 0 12px rgba(96,165,250,0.3));
+}
+
+.why-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #e0eaff;
+    margin-bottom: 8px;
+}
+
+.why-desc {
+    font-size: 0.88rem;
+    color: #9ab3d8;
+    line-height: 1.5;
+}
+
+/* Use cases */
+.use-cases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.use-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.use-icons {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.use-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+    min-width: 120px;
+}
+
+.use-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(96,165,250,0.3);
+}
+
+.use-item span {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #cdd9f0;
+}
+
+@media (max-width: 768px) {
+    .why-cards { flex-direction: column; align-items: center; }
+    .why-card { width: 90%; }
+    .use-icons { gap: 16px; }
+}

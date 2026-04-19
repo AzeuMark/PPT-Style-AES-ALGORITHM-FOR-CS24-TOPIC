@@ -1,0 +1,108 @@
+.slide-state h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+}
+
+.slide-state h1 {
+    margin-bottom: 12px;
+}
+
+.slide-state > p {
+    margin-bottom: 28px;
+}
+
+.state-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Plaintext bytes */
+.plain-text {
+    display: flex;
+    gap: 2px;
+}
+
+.byte-char {
+    width: 32px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #93bbff;
+}
+
+.state-arrow {
+    margin: 4px 0;
+}
+
+/* 4x4 Grid */
+.state-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: repeat(4, 52px);
+    gap: 4px;
+}
+
+.grid-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37,99,235,0.15);
+    border: 1px solid rgba(96,165,250,0.3);
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #60a5fa;
+    opacity: 0;
+    animation: cellPop 0.3s ease forwards;
+}
+
+/* Staggered cell animation */
+.grid-cell:nth-child(1)  { animation-delay: 0.8s; }
+.grid-cell:nth-child(2)  { animation-delay: 0.88s; }
+.grid-cell:nth-child(3)  { animation-delay: 0.96s; }
+.grid-cell:nth-child(4)  { animation-delay: 1.04s; }
+.grid-cell:nth-child(5)  { animation-delay: 1.12s; }
+.grid-cell:nth-child(6)  { animation-delay: 1.2s; }
+.grid-cell:nth-child(7)  { animation-delay: 1.28s; }
+.grid-cell:nth-child(8)  { animation-delay: 1.36s; }
+.grid-cell:nth-child(9)  { animation-delay: 1.44s; }
+.grid-cell:nth-child(10) { animation-delay: 1.52s; }
+.grid-cell:nth-child(11) { animation-delay: 1.6s; }
+.grid-cell:nth-child(12) { animation-delay: 1.68s; }
+.grid-cell:nth-child(13) { animation-delay: 1.76s; }
+.grid-cell:nth-child(14) { animation-delay: 1.84s; }
+.grid-cell:nth-child(15) { animation-delay: 1.92s; }
+.grid-cell:nth-child(16) { animation-delay: 2.0s; }
+
+@keyframes cellPop {
+    0% { opacity: 0; transform: scale(0.5); }
+    70% { transform: scale(1.08); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.grid-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .state-grid {
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(4, 44px);
+    }
+    .byte-char { width: 24px; height: 30px; font-size: 0.8rem; }
+}
